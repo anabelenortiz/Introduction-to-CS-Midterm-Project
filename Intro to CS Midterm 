@@ -1,0 +1,71 @@
+I=input('Welcome User: Enter your class R for Math and L for Language *case sensitive: ') #This is the first command the user will see
+
+print(I)
+if I=='R':
+    print('Welcome to Math class! ') 
+    j=input("Choose the operation 'C' to calculate the area of a circle or 'R' to calculate the area of a rectangle *case sensitive. ")
+    if j=="C":
+       r=10
+       carea=r**2*3.14
+       print(carea)
+    if j=='R':
+       w=10
+       l=20
+       Rarea=w*l 
+       print(Rarea) #The user will be able to either calculate the R area or C area
+        
+if I=='L':
+    print('Welcome to Language Class')
+    j=input("Choose the opperation E for Email, S for Story, or W for Word Counter *case sensitive")
+    if j=="E":
+        L=[]
+        x=input("Enter user name")
+        y=input("Enter the domain")
+        L.append(x)
+        print(L)
+        L.append(y)
+        print(L)
+        E="@".join(L)
+        print(E) #The user will be able to create an email address by providing a username and a domain
+        
+    if j=="S":
+        L1=[]
+        L2=[]
+        L3=[] #I created these 3 lists in which my three different sentenced are going to go
+
+        line1="In 1946, a girl whose name was "
+        line2=" lived with her grandmother. "
+        line3="One day, she was "
+        line4=" to school, "
+        line5="and she found a small and "
+        line6=" puppy. She decided to take it home and begged her grandma to keep it." #these are the predetermined sentences 
+
+        L1.append(line1)
+        L1.append(line2)
+        L2.append(line3)
+        L2.append(line4)
+        L3.append(line5)
+        L3.append(line6) #here I am adding the items to form a sentence
+
+        a="(add a noun for a female name)"
+        b="(add a verb ending in -ing that describes movement)"
+        c="(add an adjective related to a dog)" #these are going to be the commands that the user will enter to form the sentence
+
+
+        print (line1 + a + line2 + line3 + b + line4 + line5 + c + line6) #here I am putting the story together 
+        print("Complete the story by being creative and adding the required elements.") #this is the command the user will see
+
+      
+        
+
+        name=(input("add a noun for a female name: "))
+        verb=(input("add a verb ending in -ing that describes movement: "))
+        adjective=(input("add an adjective related to a dog: ")) #these are the commands for the user to enter the words to complete the story
+
+        print(name.join(L1) + verb.join(L2) + adjective.join(L3)) #these will join the story together with the words entered by the user
+       
+    if j=="W":
+        txt="This is a word counter"
+        x1=txt.split() #it use the spaces in sentences as a spearator
+        print(x1)
+        print(len(x1)) #len counts the word
